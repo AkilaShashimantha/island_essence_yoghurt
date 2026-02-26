@@ -32,6 +32,8 @@ html {
 
 body {
   font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.7;
   background-color: #ffffff;
   color: var(--color-charcoal);
   -webkit-font-smoothing: antialiased;
@@ -45,6 +47,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-playfair);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
 }
 
 /* Custom scrollbar */
@@ -277,6 +281,9 @@ h6 {
   border-radius: var(--radius-button);
   font-family: var(--font-inter);
   font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.75rem;
+  letter-spacing: 0.01em;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
@@ -296,6 +303,9 @@ h6 {
   border-radius: var(--radius-button);
   font-family: var(--font-inter);
   font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.75rem;
+  letter-spacing: 0.01em;
   transition: all 0.2s;
   background: transparent;
 }
@@ -312,6 +322,9 @@ h6 {
   border-radius: var(--radius-button);
   font-family: var(--font-inter);
   font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.7rem 1.75rem;
+  letter-spacing: 0.01em;
   transition: all 0.2s;
 }
 
@@ -336,9 +349,10 @@ h6 {
 .input-field {
   border: 1.5px solid #e5e7eb;
   border-radius: var(--radius-input);
-  padding: 0.75rem 1rem;
+  padding: 0.875rem 1.125rem;
   font-family: var(--font-inter);
   font-size: 0.95rem;
+  line-height: 1.5;
   transition: border-color 0.2s, box-shadow 0.2s;
   width: 100%;
   background: white;
@@ -354,12 +368,12 @@ h6 {
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem 0.75rem;
+  padding: 0.3rem 0.9rem;
   border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   font-family: var(--font-inter);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 

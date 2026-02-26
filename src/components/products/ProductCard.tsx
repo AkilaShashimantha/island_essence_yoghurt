@@ -87,7 +87,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </Link>
 
             {/* Content */}
-            <div className="p-4">
+            <div className="p-5">
                 <div className="flex items-center justify-between mb-1.5">
                     <span className={`badge text-[10px] ${flavourColors[product.flavour] ?? 'bg-gray-100 text-gray-700'}`}>
                         {product.flavour}
@@ -126,10 +126,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                         onClick={handleAddToCart}
                         disabled={isOutOfStock}
                         className={`flex items-center gap-1.5 px-3 py-2 rounded-[20px] text-xs font-semibold transition-all ${isOutOfStock
-                                ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
-                                : added
-                                    ? 'bg-green-500 text-white scale-95'
-                                    : 'bg-[#1B6B3A] text-white hover:bg-[#2a8a4e] hover:shadow-md hover:-translate-y-0.5'
+                            ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
+                            : added
+                                ? 'bg-green-500 text-white scale-95'
+                                : 'bg-[#1B6B3A] text-white hover:bg-[#2a8a4e] hover:shadow-md hover:-translate-y-0.5'
                             }`}
                     >
                         <ShoppingCart className="w-3.5 h-3.5" />
