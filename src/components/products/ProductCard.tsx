@@ -142,11 +142,10 @@ export default function ProductCard({ product }: ProductCardProps) {
                         <span className="text-xs text-gray-400 ml-1">/ {product.size}</span>
                     </div>
 
-```tsx
                     <button
                         onClick={handleAddToCart}
                         disabled={isOutOfStock}
-                        className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs font-bold transition-all shadow-sm ${
+                        className={`flex items-center gap-2 px-4 py-2.5 rounded-[15px] text-xs font-bold transition-all shadow-sm ${
                             isOutOfStock
                                 ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                                 : added
@@ -154,10 +153,9 @@ export default function ProductCard({ product }: ProductCardProps) {
                                     : 'bg-[#1B6B3A] text-white hover:bg-[#14522c] hover:shadow-lg hover:-translate-y-0.5 active:scale-95'
                         }`}
                     >
-                        <ShoppingCart className="w-4 h-4 stroke-[2.5px]" />
+                        <ShoppingCart className="w-4 h-6 stroke-[2.5px]" />
                         <span>{added ? 'Added!' : 'Add to Cart'}</span>
                     </button>
-```
                 </div>
             </div>
         </div>
