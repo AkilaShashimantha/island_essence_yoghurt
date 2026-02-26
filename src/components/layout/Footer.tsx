@@ -126,6 +126,7 @@ export default function Footer() {
                         {/* Email CTA */}
                         <div className="mt-6">
                             <p className="text-xs text-green-300 mb-2">Get recipes &amp; offers in your inbox</p>
+                            <div className="h-2" ></div>
                             <a
                                 href="mailto:hello@islandessence.lk"
                                 className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm bg-white/10 border border-green-600 text-white hover:border-[#D4A843] hover:bg-white/20 transition-all"
@@ -134,6 +135,7 @@ export default function Footer() {
                                 hello@islandessence.lk
                             </a>
                         </div>
+                        <div className="h-2" ></div>
                     </div>
                 </div>
 

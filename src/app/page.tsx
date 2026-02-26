@@ -275,6 +275,8 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="h-4" ></div>
         </div>
       </section>
 
@@ -296,6 +298,9 @@ export default function HomePage() {
           <Link href="/sustainability" className="btn-gold px-6 py-2.5 text-sm shrink-0">
             Learn More
           </Link>
+
+          <div className="h-4" ></div>
+
         </div>
       </section>
 
@@ -360,6 +365,9 @@ export default function HomePage() {
             <Link href="/products" className="btn-gold px-8 py-3.5 text-base flex items-center gap-2">
               Order Now <ArrowRight className="w-4 h-4" />
             </Link>
+
+            <div className="h-4" ></div>
+
             <Link href="/faq" className="text-white/80 text-sm underline underline-offset-4 hover:text-white transition-colors">
               Have questions? Check our FAQ
             </Link>
