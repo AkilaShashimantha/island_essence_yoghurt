@@ -52,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     const isOutOfStock = product.stockQty === 0;
 
     return (
-        <div className="card-hover rounded-[12px] bg-white border border-gray-100 overflow-hidden shadow-sm group">
+        <div className="card-hover rounded-[12px] bg-white border border-gray-100 overflow-hidden shadow-sm group p-4">
             {/* Image area */}
             <Link href={`/products/${product.slug}`} className="block relative">
                 <div className="relative aspect-square bg-gradient-to-br from-[#F5F0E8] to-[#e8f5ee] overflow-hidden">
@@ -145,14 +145,14 @@ export default function ProductCard({ product }: ProductCardProps) {
                     <button
                         onClick={handleAddToCart}
                         disabled={isOutOfStock}
-                        className={`flex items-center gap-1.5 px-3 py-2 rounded-[20px] text-xs font-semibold transition-all ${isOutOfStock
+                        className={`flex items-center gap-1.5 px-3 py-2 rounded-[15px] text-xs font-semibold transition-all ${isOutOfStock
                             ? 'bg-gray-100 text-gray-400 cursor-not-allowed'
                             : added
                                 ? 'bg-green-500 text-white scale-95'
                                 : 'bg-[#1B6B3A] text-white hover:bg-[#2a8a4e] hover:shadow-md hover:-translate-y-0.5'
                             }`}
                     >
-                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <ShoppingCart className="w-4.2 h-3.5" />
                         {added ? 'Added!' : 'Add'}
                     </button>
                 </div>
