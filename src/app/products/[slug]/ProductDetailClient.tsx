@@ -156,6 +156,8 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 </span>
                             </div>
 
+                            <div className="h-px bg-gray-100 w-full mb-8" />
+
                             {/* CTA buttons */}
                             <div className="flex gap-4 mb-10">
                                 <button
