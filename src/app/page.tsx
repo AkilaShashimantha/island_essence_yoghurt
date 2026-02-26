@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Leaf, Heart, Shield, Star, ChevronRight, Package } from 'lucide-react';
 import { products } from '@/lib/data/products';
 import ProductCard from '@/components/products/ProductCard';
+import HeroSlideshow from '@/components/layout/HeroSlideshow';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -71,11 +72,7 @@ export default function HomePage() {
       <section
         className="relative min-h-[90vh] flex items-center overflow-hidden"
         style={{
-          backgroundImage:
-            'linear-gradient(135deg, rgba(15,61,34,0.82) 0%, rgba(27,107,58,0.80) 50%, rgba(42,138,78,0.78) 100%), url(/images/bg_background.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)',
         }}
       >
         {/* Decorative orbs */}
@@ -139,11 +136,7 @@ export default function HomePage() {
           {/* Right: Hero visual */}
           <div className="hidden lg:flex items-center justify-center animate-fade-in-right">
             <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center animate-float">
-                <div className="w-60 h-60 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-                  <span className="text-[120px] drop-shadow-2xl">🥛</span>
-                </div>
-              </div>
+              <HeroSlideshow />
               {/* Floating product chips */}
               {[
                 { emoji: '🫐', label: 'Blueberry', color: 'from-purple-400 to-purple-600', pos: 'top-0 left-0 -translate-x-8 -translate-y-4' },
