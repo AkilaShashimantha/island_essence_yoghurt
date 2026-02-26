@@ -28,7 +28,9 @@ export default function Navbar() {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+                        ? 'bg-white/95 backdrop-blur-md shadow-sm'
+                        : 'bg-gradient-to-b from-black/30 to-transparent'
                     }`}
             >
                 <nav className="container-custom flex items-center justify-between h-20">
@@ -40,11 +42,11 @@ export default function Navbar() {
                         <div>
                             <span
                                 className="font-bold text-lg leading-tight block"
-                                style={{ fontFamily: 'Playfair Display', color: scrolled ? '#1B6B3A' : '#1B6B3A' }}
+                                style={{ fontFamily: 'Playfair Display', color: scrolled ? '#1B6B3A' : '#ffffff' }}
                             >
                                 Island Essence
                             </span>
-                            <span className="text-[10px] tracking-widest uppercase text-[#D4A843] font-semibold -mt-1 block">
+                            <span className={`text-[10px] tracking-widest uppercase font-semibold -mt-1 block ${scrolled ? 'text-[#D4A843]' : 'text-[#f0c96a]'}`}>
                                 Coconut Yogurt
                             </span>
                         </div>
@@ -56,10 +58,14 @@ export default function Navbar() {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
-                                    className="text-[15px] font-medium text-gray-700 hover:text-[#1B6B3A] transition-colors relative group"
+                                    className={`text-[15px] font-semibold transition-colors relative group ${scrolled
+                                            ? 'text-gray-700 hover:text-[#1B6B3A]'
+                                            : 'text-white hover:text-[#f0c96a] drop-shadow-md'
+                                        }`}
                                 >
                                     {link.label}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#1B6B3A] group-hover:w-full transition-all duration-300 rounded-full" />
+                                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 rounded-full ${scrolled ? 'bg-[#1B6B3A]' : 'bg-[#f0c96a]'
+                                        }`} />
                                 </Link>
                             </li>
                         ))}
@@ -69,7 +75,10 @@ export default function Navbar() {
                     <div className="flex items-center gap-3">
                         <Link
                             href="/account"
-                            className="hidden md:flex w-10 h-10 items-center justify-center rounded-full hover:bg-[#F5F0E8] text-gray-600 hover:text-[#1B6B3A] transition-all"
+                            className={`hidden md:flex w-10 h-10 items-center justify-center rounded-full transition-all ${scrolled
+                                    ? 'hover:bg-[#F5F0E8] text-gray-600 hover:text-[#1B6B3A]'
+                                    : 'text-white hover:bg-white/20'
+                                }`}
                             aria-label="My Account"
                         >
                             <User className="w-5 h-5" />
@@ -77,7 +86,10 @@ export default function Navbar() {
 
                         <button
                             onClick={toggleCart}
-                            className="relative w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#F5F0E8] text-gray-600 hover:text-[#1B6B3A] transition-all"
+                            className={`relative w-10 h-10 flex items-center justify-center rounded-full transition-all ${scrolled
+                                    ? 'hover:bg-[#F5F0E8] text-gray-600 hover:text-[#1B6B3A]'
+                                    : 'text-white hover:bg-white/20'
+                                }`}
                             aria-label={`Shopping cart, ${totalItems} items`}
                         >
                             <ShoppingCart className="w-5 h-5" />
@@ -91,7 +103,8 @@ export default function Navbar() {
                         {/* Mobile hamburger */}
                         <button
                             onClick={() => setMobileOpen(true)}
-                            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#F5F0E8] text-gray-600"
+                            className={`md:hidden w-10 h-10 flex items-center justify-center rounded-full transition-all ${scrolled ? 'hover:bg-[#F5F0E8] text-gray-600' : 'text-white hover:bg-white/20'
+                                }`}
                             aria-label="Open menu"
                         >
                             <Menu className="w-5 h-5" />
