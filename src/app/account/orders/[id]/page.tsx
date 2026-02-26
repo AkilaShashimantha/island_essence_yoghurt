@@ -30,7 +30,7 @@ export default async function OrderDetailPage({ params }: { params: Promise<{ id
 
     return (
         <div className="bg-[#F5F0E8]/30 min-h-screen">
-            <section className="py-12 bg-[#F5F0E8]">
+            <section className="pt-32 pb-12 bg-[#F5F0E8]">
                 <div className="container-custom">
                     <Link href="/account/orders" className="text-xs text-[#1B6B3A] font-medium hover:underline flex items-center gap-1 mb-1">
                         ← My Orders

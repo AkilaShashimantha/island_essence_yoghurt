@@ -31,7 +31,7 @@ export default function CheckoutPage() {
     return (
         <div className="bg-[#F5F0E8]/30 min-h-screen">
             {/* Header */}
-            <section className="py-12 bg-[#F5F0E8]">
+            <section className="pt-32 pb-12 bg-[#F5F0E8]">
                 <div className="container-custom">
                     <h1 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display' }}>
                         Checkout
@@ -43,8 +43,8 @@ export default function CheckoutPage() {
                             return (
                                 <div key={s} className="flex items-center">
                                     <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all ${i < step ? 'bg-green-500 text-white' :
-                                            i === step ? 'bg-[#1B6B3A] text-white ring-4 ring-[#1B6B3A]/20' :
-                                                'bg-gray-200 text-gray-400'
+                                        i === step ? 'bg-[#1B6B3A] text-white ring-4 ring-[#1B6B3A]/20' :
+                                            'bg-gray-200 text-gray-400'
                                         }`}>
                                         {i < step ? <Check className="w-4 h-4" /> : <Icon className="w-4 h-4" />}
                                     </div>

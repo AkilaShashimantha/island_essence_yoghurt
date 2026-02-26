@@ -36,7 +36,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <Navbar />
-        <main className="min-h-screen pt-20">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
         <CartDrawer />
       </body>

@@ -37,7 +37,7 @@ const adminNav = [
 
 export default function AdminDashboard() {
     return (
-        <div className="bg-gray-50 min-h-screen">
+        <div className="bg-gray-50 min-h-screen pt-20">
             {/* Admin Topbar */}
             <div className="bg-[#1B6B3A] text-white px-6 py-3 flex items-center justify-between">
                 <div className="flex items-center gap-4">

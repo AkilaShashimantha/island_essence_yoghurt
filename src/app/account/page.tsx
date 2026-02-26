@@ -22,7 +22,7 @@ export default function AccountPage() {
 
     return (
         <div className="bg-[#F5F0E8]/30 min-h-screen">
-            <section className="py-12 bg-[#F5F0E8]">
+            <section className="pt-32 pb-12 bg-[#F5F0E8]">
                 <div className="container-custom">
                     <h1 className="text-3xl font-bold text-gray-900" style={{ fontFamily: 'Playfair Display' }}>My Account</h1>
                 </div>

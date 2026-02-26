@@ -29,7 +29,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
     };
 
     return (
-        <div className="bg-white">
+        <div className="bg-white pt-20">
             {/* Breadcrumb */}
             <div className="bg-[#F5F0E8] py-3">
                 <div className="container-custom">

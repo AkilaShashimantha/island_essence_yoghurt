@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function LoginPage() {
     return (
-        <div className="min-h-[calc(100vh-80px)] flex items-center justify-center bg-[#F5F0E8]/50 py-16 px-4">
+        <div className="min-h-screen pt-20 flex items-center justify-center bg-[#F5F0E8]/50 py-16 px-4">
             <div className="w-full max-w-md">
                 {/* Card */}
                 <div className="bg-white rounded-[12px] shadow-lg p-8 animate-scale-in">
