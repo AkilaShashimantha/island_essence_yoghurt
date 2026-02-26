@@ -254,6 +254,10 @@ export default function HomePage() {
             <Link href="/about" className="btn-primary px-7 py-3 inline-flex items-center gap-2 text-sm">
               Meet the Team <ArrowRight className="w-4 h-4" />
             </Link>
+
+              <div className="h-4" ></div>
+
+            
           </div>
           <div className="grid grid-cols-2 gap-4 animate-fade-in-right">
             {[
