@@ -54,8 +54,9 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 {product.badge && (
                                     <div className="absolute top-5 left-5 z-10">
                                         <span className="badge bg-[#1B6B3A] text-white">{product.badge}</span>
-                                    </div>
+                                        </div>
                                 )}
+                                <div className="h-4" />
                                 {product.imageUrl ? (
                                     <Image
                                         src={product.imageUrl}
@@ -140,7 +141,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 <span className="text-sm text-gray-500">per {product.size}</span>
                             </div>
 
-                            <div className="h-px bg-gray-100 w-full mb-8" />
+                            <div className="h-4" />
 
                             {/* Stock */}
                             <div className="mb-7">
@@ -153,7 +154,9 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                     <div className="text-red-500 text-sm">Out of stock</div>
                                 )}
                             </div>
-                            <div className="h-px bg-gray-100 w-full mb-8" />
+
+                            <div className="h-4" />
+
                             {/* Quantity picker */}
                             <div className="flex items-center gap-5 mb-7">
                                 <span className="text-sm font-semibold text-gray-700">Quantity</span>
@@ -177,7 +180,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 </span>
                             </div>
 
-                            <div className="h-8" />
+                            <div className="h-4" />
 
                             {/* CTA buttons */}
                             <div className="flex gap-4 mb-10">
@@ -199,6 +202,8 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                     Buy Now
                                 </Link>
                             </div>
+
+                            <div className="h-4" />
 
                             {/* Tabs */}
                             <div className="border-2 border-gray-100 rounded-2xl overflow-hidden">
