@@ -18,12 +18,15 @@ export default function CartPage() {
 
     return (
         <div className="bg-[#F5F0E8]/30 min-h-screen">
-            <section className="pt-32 pb-12 bg-[#F5F0E8]">
+            <section
+                className="pt-32 pb-12"
+                style={{ background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)' }}
+            >
                 <div className="container-custom">
-                    <h1 className="text-3xl lg:text-4xl font-bold text-gray-900" style={{ fontFamily: 'Playfair Display' }}>
+                    <h1 className="text-3xl lg:text-4xl font-bold text-white" style={{ fontFamily: 'Playfair Display' }}>
                         Shopping Cart
                     </h1>
-                    <p className="text-gray-500 text-sm mt-1">
+                    <p className="text-green-100 text-sm mt-1">
                         {items.length > 0 ? `${items.reduce((s, i) => s + i.quantity, 0)} items in your cart` : 'Your cart is empty'}
                     </p>
                 </div>

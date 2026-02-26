@@ -31,9 +31,12 @@ export default function CheckoutPage() {
     return (
         <div className="bg-[#F5F0E8]/30 min-h-screen">
             {/* Header */}
-            <section className="pt-32 pb-12 bg-[#F5F0E8]">
+            <section
+                className="pt-32 pb-12"
+                style={{ background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)' }}
+            >
                 <div className="container-custom">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Playfair Display' }}>
+                    <h1 className="text-3xl font-bold text-white mb-6" style={{ fontFamily: 'Playfair Display' }}>
                         Checkout
                     </h1>
                     {/* Step indicator */}
@@ -43,15 +46,15 @@ export default function CheckoutPage() {
                             return (
                                 <div key={s} className="flex items-center">
                                     <div className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all ${i < step ? 'bg-green-500 text-white' :
-                                        i === step ? 'bg-[#1B6B3A] text-white ring-4 ring-[#1B6B3A]/20' :
-                                            'bg-gray-200 text-gray-400'
+                                        i === step ? 'bg-[#D4A843] text-white ring-4 ring-[#D4A843]/20' :
+                                            'bg-white/20 text-white/60'
                                         }`}>
                                         {i < step ? <Check className="w-4 h-4" /> : <Icon className="w-4 h-4" />}
                                     </div>
-                                    <span className={`hidden sm:block text-xs font-medium ml-2 ${i === step ? 'text-[#1B6B3A]' : 'text-gray-400'
+                                    <span className={`hidden sm:block text-xs font-medium ml-2 ${i === step ? 'text-[#D4A843]' : 'text-white/60'
                                         }`}>{s}</span>
                                     {i < STEPS.length - 1 && (
-                                        <div className={`flex-1 h-0.5 mx-3 rounded-full ${i < step ? 'bg-green-400' : 'bg-gray-200'}`} style={{ minWidth: '24px' }} />
+                                        <div className={`flex-1 h-0.5 mx-3 rounded-full ${i < step ? 'bg-green-400' : 'bg-white/20'}`} style={{ minWidth: '24px' }} />
                                     )}
                                 </div>
                             );

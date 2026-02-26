@@ -32,14 +32,17 @@ export default function ProductDetailClient({ product }: { product: Product }) {
     return (
         <div className="bg-white pt-20">
             {/* Breadcrumb */}
-            <div className="bg-[#F5F0E8] py-4">
+            <div
+                className="py-4"
+                style={{ background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)' }}
+            >
                 <div className="container-custom">
-                    <nav className="flex items-center gap-2 text-xs text-gray-500">
-                        <Link href="/" className="hover:text-[#1B6B3A] transition-colors">Home</Link>
+                    <nav className="flex items-center gap-2 text-xs text-green-200">
+                        <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <ChevronRight className="w-3 h-3" />
-                        <Link href="/products" className="hover:text-[#1B6B3A] transition-colors">Products</Link>
+                        <Link href="/products" className="hover:text-white transition-colors">Products</Link>
                         <ChevronRight className="w-3 h-3" />
-                        <span className="text-gray-800 font-medium truncate max-w-[200px]">{product.name}</span>
+                        <span className="text-white font-medium truncate max-w-[200px]">{product.name}</span>
                     </nav>
                 </div>
             </div>
@@ -54,7 +57,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 {product.badge && (
                                     <div className="absolute top-5 left-5 z-10">
                                         <span className="badge bg-[#1B6B3A] text-white">{product.badge}</span>
-                                        </div>
+                                    </div>
                                 )}
                                 <div className="h-4" />
                                 {product.imageUrl ? (

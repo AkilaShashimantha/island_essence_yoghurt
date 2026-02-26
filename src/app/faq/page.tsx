@@ -125,17 +125,17 @@ export default function FAQPage() {
         <div className="bg-white">
             {/* Hero */}
             <section
-                className="py-20 text-center"
-                style={{ background: 'linear-gradient(135deg, #F5F0E8, #ede6d5)' }}
+                className="pt-32 pb-16 text-center relative overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)' }}
             >
                 <div className="container-custom">
-                    <HelpCircle className="w-10 h-10 text-[#1B6B3A] mx-auto mb-4" />
-                    <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Playfair Display' }}>
+                    <HelpCircle className="w-10 h-10 text-[#D4A843] mx-auto mb-4" />
+                    <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Playfair Display' }}>
                         Frequently Asked Questions
                     </h1>
                     <div className="divider-gold mx-auto mb-4" />
-                    <p className="text-gray-600 max-w-xl mx-auto">
-                        Can't find your answer? <a href="/contact" className="text-[#1B6B3A] font-semibold hover:underline">Contact us</a> and we'll be happy to help.
+                    <p className="text-green-100 max-w-xl mx-auto">
+                        Can't find your answer? <a href="/contact" className="text-[#D4A843] font-semibold hover:underline">Contact us</a> and we'll be happy to help.
                     </p>
                 </div>
             </section>

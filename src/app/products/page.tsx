@@ -23,21 +23,21 @@ export default function ProductsPage() {
         <>
             {/* Hero Banner */}
             <section
-                className="py-20 text-center relative overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #F5F0E8, #ede6d5)' }}
+                className="pt-32 pb-16 text-center relative overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)' }}
             >
                 <div className="container-custom relative z-10">
                     <span className="text-[#D4A843] text-sm font-semibold uppercase tracking-widest">
                         Our Range
                     </span>
                     <h1
-                        className="text-4xl lg:text-5xl font-bold text-gray-900 mt-2 mb-4"
+                        className="text-4xl lg:text-5xl font-bold text-white mt-2 mb-4"
                         style={{ fontFamily: 'Playfair Display' }}
                     >
                         Coconut Milk Yogurt
                     </h1>
                     <div className="divider-gold mx-auto mb-5" />
-                    <p className="text-gray-600 max-w-xl mx-auto text-base leading-relaxed">
+                    <p className="text-green-100 max-w-xl mx-auto text-base leading-relaxed">
                         Six handcrafted flavours, all made from locally sourced Sri Lankan coconut milk.
                         No preservatives. No artificial additives. Just pure goodness.
                     </p>
@@ -68,8 +68,8 @@ export default function ProductsPage() {
                                     key={f}
                                     onClick={() => setActiveFilter(f)}
                                     className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${activeFilter === f
-                                            ? 'bg-[#1B6B3A] text-white shadow-sm'
-                                            : 'bg-gray-100 text-gray-600 hover:bg-[#F5F0E8] hover:text-[#1B6B3A]'
+                                        ? 'bg-[#1B6B3A] text-white shadow-sm'
+                                        : 'bg-gray-100 text-gray-600 hover:bg-[#F5F0E8] hover:text-[#1B6B3A]'
                                         }`}
                                 >
                                     {f}

@@ -20,12 +20,12 @@ export default function ContactPage() {
         <div className="bg-white">
             {/* Hero */}
             <section
-                className="py-20 text-center"
-                style={{ background: 'linear-gradient(135deg, #F5F0E8, #ede6d5)' }}
+                className="pt-32 pb-16 text-center relative overflow-hidden"
+                style={{ background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)' }}
             >
                 <div className="container-custom">
                     <span className="text-[#D4A843] text-sm font-semibold uppercase tracking-widest">Get in Touch</span>
-                    <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mt-2 mb-4" style={{ fontFamily: 'Playfair Display' }}>
+                    <h1 className="text-4xl lg:text-5xl font-bold text-white mt-2 mb-4" style={{ fontFamily: 'Playfair Display' }}>
                         We'd Love to Hear From You
                     </h1>
                     <div className="divider-gold mx-auto" />
