@@ -25,6 +25,7 @@ export default function ContactPage() {
             >
                 <div className="container-custom">
                     <span className="text-[#D4A843] text-sm font-semibold uppercase tracking-widest">Get in Touch</span>
+                    <div className="h-4" />
                     <h1 className="text-4xl lg:text-5xl font-bold text-white mt-2 mb-4" style={{ fontFamily: 'Playfair Display' }}>
                         We'd Love to Hear From You
                     </h1>
