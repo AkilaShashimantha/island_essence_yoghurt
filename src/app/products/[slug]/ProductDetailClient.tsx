@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShoppingCart, ArrowLeft, Minus, Plus, Star, ChevronRight, Check } from 'lucide-react';
 import { Product, products } from '@/lib/data/products';
 import { useCartStore } from '@/lib/store/cartStore';
@@ -51,11 +52,31 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                         <div className="animate-fade-in-left">
                             <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#F5F0E8] to-[#e8f5ee] aspect-square flex items-center justify-center relative">
                                 {product.badge && (
-                                    <div className="absolute top-5 left-5">
+                                    <div className="absolute top-5 left-5 z-10">
                                         <span className="badge bg-[#1B6B3A] text-white">{product.badge}</span>
                                     </div>
                                 )}
-                                <div className="flex flex-col items-center gap-6 p-8">
+                                {product.imageUrl ? (
+                                    <Image
+                                        src={product.imageUrl}
+                                        alt={product.name}
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 1024px) 100vw, 50vw"
+                                        priority
+                                        onError={(e) => {
+                                            // Hide broken image and show emoji fallback
+                                            (e.currentTarget as HTMLImageElement).style.display = 'none';
+                                            const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                                            if (fallback) fallback.style.display = 'flex';
+                                        }}
+                                    />
+                                ) : null}
+                                {/* Emoji fallback (shown if no imageUrl or image fails to load) */}
+                                <div
+                                    className="flex flex-col items-center gap-6 p-8"
+                                    style={{ display: product.imageUrl ? 'none' : 'flex' }}
+                                >
                                     <span className="text-[160px] animate-float drop-shadow-2xl">
                                         {flavourEmojis[product.flavour] ?? '🥛'}
                                     </span>
@@ -132,7 +153,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                     <div className="text-red-500 text-sm">Out of stock</div>
                                 )}
                             </div>
-  <div className="h-px bg-gray-100 w-full mb-8" />
+                            <div className="h-px bg-gray-100 w-full mb-8" />
                             {/* Quantity picker */}
                             <div className="flex items-center gap-5 mb-7">
                                 <span className="text-sm font-semibold text-gray-700">Quantity</span>
@@ -156,7 +177,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 </span>
                             </div>
 
-                            <div className="h-px bg-gray-100 w-full mb-8" />
+                            <div className="h-8" />
 
                             {/* CTA buttons */}
                             <div className="flex gap-4 mb-10">

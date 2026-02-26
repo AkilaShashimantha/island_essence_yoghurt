@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ShoppingCart, Star, Eye } from 'lucide-react';
 import { Product } from '@/lib/data/products';
 import { useCartStore } from '@/lib/store/cartStore';
@@ -55,12 +56,31 @@ export default function ProductCard({ product }: ProductCardProps) {
             {/* Image area */}
             <Link href={`/products/${product.slug}`} className="block relative">
                 <div className="relative aspect-square bg-gradient-to-br from-[#F5F0E8] to-[#e8f5ee] overflow-hidden">
-                    {/* Decorative circles */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-white/40" />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white/60 flex items-center justify-center">
-                        <span className="text-5xl animate-float">
-                            {flavourEmojis[product.flavour] ?? '🥛'}
-                        </span>
+                    {product.imageUrl ? (
+                        <Image
+                            src={product.imageUrl}
+                            alt={product.name}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            onError={(e) => {
+                                (e.currentTarget as HTMLImageElement).style.display = 'none';
+                                const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                                if (fallback) fallback.style.display = 'flex';
+                            }}
+                        />
+                    ) : null}
+                    {/* Emoji fallback */}
+                    <div
+                        className="absolute inset-0 flex items-center justify-center"
+                        style={{ display: product.imageUrl ? 'none' : 'flex' }}
+                    >
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-white/40" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-white/60 flex items-center justify-center">
+                            <span className="text-5xl animate-float">
+                                {flavourEmojis[product.flavour] ?? '🥛'}
+                            </span>
+                        </div>
                     </div>
 
                     {/* Badges */}

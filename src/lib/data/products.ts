@@ -50,7 +50,7 @@ export const products: Product[] = [
         price: 180,
         stockQty: 50,
         isActive: true,
-        imageUrl: '/images/plain-yogurt.jpg',
+        imageUrl: '/images/plain_coconut_milk_yoghurt.jpeg',
         badge: 'Bestseller',
     },
     {
@@ -84,7 +84,7 @@ export const products: Product[] = [
         price: 200,
         stockQty: 35,
         isActive: true,
-        imageUrl: '/images/blueberry-yogurt.jpg',
+        imageUrl: '/images/common_coconut_milk_fruit_yoghurt.jpeg',
         badge: 'Popular',
     },
     {
@@ -118,7 +118,7 @@ export const products: Product[] = [
         price: 200,
         stockQty: 40,
         isActive: true,
-        imageUrl: '/images/vanilla-yogurt.jpg',
+        imageUrl: '/images/vanilla_coconut_mik_yoghurt.jpeg',
     },
     {
         id: '4',
@@ -151,7 +151,7 @@ export const products: Product[] = [
         price: 200,
         stockQty: 30,
         isActive: true,
-        imageUrl: '/images/strawberry-yogurt.jpg',
+        imageUrl: '/images/common_coconut_milk_fruit_yoghurt.jpeg',
         badge: 'New',
     },
     {
@@ -184,7 +184,7 @@ export const products: Product[] = [
         price: 210,
         stockQty: 25,
         isActive: true,
-        imageUrl: '/images/honey-yogurt.jpg',
+        imageUrl: '/images/coconut_milk_yoghurt_with_honey.jpeg',
         badge: 'Premium',
     },
     {
@@ -217,7 +217,7 @@ export const products: Product[] = [
         price: 800,
         stockQty: 20,
         isActive: true,
-        imageUrl: '/images/bulk-yogurt.jpg',
+        imageUrl: '/images/bulk_plain_yoghurt.jpeg',
         badge: 'B2B',
     },
 ];
