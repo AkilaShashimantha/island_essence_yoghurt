@@ -26,18 +26,18 @@ export default function HeroSlideshow() {
 
     return (
         <div className="w-80 h-80 rounded-full bg-white/5 border-2 border-white/10 flex items-center justify-center animate-float overflow-hidden relative">
-            <div className="w-60 h-60 rounded-full bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden relative">
+            <div className="w-60 h-60 rounded-full bg-white/10 border border-white/20 flex items-center justify-center overflow-hidden relative p-5">
                 {/* Product image */}
                 <div
-                    className="absolute inset-0 rounded-full overflow-hidden transition-opacity duration-500"
+                    className="absolute inset-5 rounded-full overflow-hidden transition-opacity duration-500"
                     style={{ opacity: visible ? 1 : 0 }}
                 >
                     <Image
                         src={product.imageUrl}
                         alt={product.name}
                         fill
-                        className="object-cover"
-                        sizes="240px"
+                        className="object-contain"
+                        sizes="200px"
                         priority
                     />
                 </div>
