@@ -31,7 +31,7 @@ export default function ProductsPage() {
                         Our Range
                     </span>
                     <h1
-                        className="text-4xl lg:text-5xl font-bold text-white mt-2 mb-4"
+                        className="text-4xl lg:text-5xl font-bold text-white mt-4 mb-4"
                         style={{ fontFamily: 'Playfair Display' }}
                     >
                         Coconut Milk Yogurt
