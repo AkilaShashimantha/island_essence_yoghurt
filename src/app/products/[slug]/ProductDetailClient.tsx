@@ -119,6 +119,8 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                 <span className="text-sm text-gray-500">per {product.size}</span>
                             </div>
 
+                            <div className="h-px bg-gray-100 w-full mb-8" />
+
                             {/* Stock */}
                             <div className="mb-7">
                                 {product.stockQty > 0 ? (
@@ -130,7 +132,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                                     <div className="text-red-500 text-sm">Out of stock</div>
                                 )}
                             </div>
-
+  <div className="h-px bg-gray-100 w-full mb-8" />
                             {/* Quantity picker */}
                             <div className="flex items-center gap-5 mb-7">
                                 <span className="text-sm font-semibold text-gray-700">Quantity</span>
