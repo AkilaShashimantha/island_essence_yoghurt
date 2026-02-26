@@ -30,8 +30,9 @@ export default function ProductsPage() {
                     <span className="text-[#D4A843] text-sm font-semibold uppercase tracking-widest">
                         Our Range
                     </span>
+                    <div className="h-4" />
                     <h1
-                        className="text-4xl lg:text-5xl font-bold text-white mt-4 mb-4"
+                        className="text-4xl lg:text-5xl font-bold text-white mt-4 mb-2"
                         style={{ fontFamily: 'Playfair Display' }}
                     >
                         Coconut Milk Yogurt
