@@ -71,7 +71,11 @@ export default function HomePage() {
       <section
         className="relative min-h-[90vh] flex items-center overflow-hidden"
         style={{
-          background: 'linear-gradient(135deg, #0f3d22 0%, #1B6B3A 50%, #2a8a4e 100%)',
+          backgroundImage:
+            'linear-gradient(135deg, rgba(15,61,34,0.82) 0%, rgba(27,107,58,0.80) 50%, rgba(42,138,78,0.78) 100%), url(/images/bg_background.jpeg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         {/* Decorative orbs */}
